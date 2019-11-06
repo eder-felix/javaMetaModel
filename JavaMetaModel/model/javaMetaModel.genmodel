@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/JavaMetaModel/src-gen" creationIcons="false" editDirectory="/JavaMetaModel.edit/src-gen"
+    editorDirectory="/JavaMetaModel.editor/src-gen" modelPluginID="JavaMetaModel"
+    modelName="JavaMetaModel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>javaMetaModel.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="JavaMetaModel" disposableProviderFactory="true" ecorePackage="javaMetaModel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="javaMetaModel.ecore#//Vis">
+      <genEnumLiterals ecoreEnumLiteral="javaMetaModel.ecore#//Vis/public"/>
+      <genEnumLiterals ecoreEnumLiteral="javaMetaModel.ecore#//Vis/private"/>
+      <genEnumLiterals ecoreEnumLiteral="javaMetaModel.ecore#//Vis/protected"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="javaMetaModel.ecore#//PrimitiveType">
+      <genEnumLiterals ecoreEnumLiteral="javaMetaModel.ecore#//PrimitiveType/JByte"/>
+      <genEnumLiterals ecoreEnumLiteral="javaMetaModel.ecore#//PrimitiveType/JShort"/>
+      <genEnumLiterals ecoreEnumLiteral="javaMetaModel.ecore#//PrimitiveType/JInt"/>
+      <genEnumLiterals ecoreEnumLiteral="javaMetaModel.ecore#//PrimitiveType/JLong"/>
+      <genEnumLiterals ecoreEnumLiteral="javaMetaModel.ecore#//PrimitiveType/JChar"/>
+      <genEnumLiterals ecoreEnumLiteral="javaMetaModel.ecore#//PrimitiveType/JFloat"/>
+      <genEnumLiterals ecoreEnumLiteral="javaMetaModel.ecore#//PrimitiveType/JDouble"/>
+      <genEnumLiterals ecoreEnumLiteral="javaMetaModel.ecore#//PrimitiveType/JBoolean"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="javaMetaModel.ecore#//ReferenceType">
+      <genEnumLiterals ecoreEnumLiteral="javaMetaModel.ecore#//ReferenceType/JClassType"/>
+      <genEnumLiterals ecoreEnumLiteral="javaMetaModel.ecore#//ReferenceType/JInterfaceType"/>
+      <genEnumLiterals ecoreEnumLiteral="javaMetaModel.ecore#//ReferenceType/JArrayType"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="javaMetaModel.ecore#//Direction">
+      <genEnumLiterals ecoreEnumLiteral="javaMetaModel.ecore#//Direction/input"/>
+      <genEnumLiterals ecoreEnumLiteral="javaMetaModel.ecore#//Direction/return"/>
+    </genEnums>
+    <genClasses ecoreClass="javaMetaModel.ecore#//JElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute javaMetaModel.ecore#//JElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="javaMetaModel.ecore#//JMethod">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference javaMetaModel.ecore#//JMethod/jparameter"/>
+    </genClasses>
+    <genClasses ecoreClass="javaMetaModel.ecore#//JClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute javaMetaModel.ecore#//JClass/isAbstract"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute javaMetaModel.ecore#//JClass/isFinal"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference javaMetaModel.ecore#//JClass/jfeature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference javaMetaModel.ecore#//JClass/owner"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference javaMetaModel.ecore#//JClass/jsubClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference javaMetaModel.ecore#//JClass/jsuperClass"/>
+    </genClasses>
+    <genClasses ecoreClass="javaMetaModel.ecore#//JPackage">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference javaMetaModel.ecore#//JPackage/jclass"/>
+    </genClasses>
+    <genClasses ecoreClass="javaMetaModel.ecore#//JField"/>
+    <genClasses ecoreClass="javaMetaModel.ecore#//JAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute javaMetaModel.ecore#//JAttribute/primitiveType"/>
+    </genClasses>
+    <genClasses ecoreClass="javaMetaModel.ecore#//JReference">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute javaMetaModel.ecore#//JReference/refType"/>
+    </genClasses>
+    <genClasses ecoreClass="javaMetaModel.ecore#//JParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute javaMetaModel.ecore#//JParameter/direction"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference javaMetaModel.ecore#//JParameter/owner"/>
+    </genClasses>
+    <genClasses ecoreClass="javaMetaModel.ecore#//JPrimitiveTypePar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute javaMetaModel.ecore#//JPrimitiveTypePar/primitiveType"/>
+    </genClasses>
+    <genClasses ecoreClass="javaMetaModel.ecore#//JReferenceTypePar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute javaMetaModel.ecore#//JReferenceTypePar/refType"/>
+    </genClasses>
+    <genClasses ecoreClass="javaMetaModel.ecore#//JFeature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute javaMetaModel.ecore#//JFeature/visibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute javaMetaModel.ecore#//JFeature/isStatic"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference javaMetaModel.ecore#//JFeature/owner"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
